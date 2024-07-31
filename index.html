@@ -4,13 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDL</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
 </head>
+
 <body>
-    <main>
-        <h1>buscar</h1>
+    <main class="container">
+        <div class="up-bar">
+            <div class="search-container">
+                <input type="text" placeholder="Buscar productos..." id="search-input">
+                <button id="search-button">
+                    <img src="./img/icons/search-line.svg" alt="Buscar">
+                </button>
+            </div> 
+            <div>
+                <button>
+                    <img src="./img/icons/search-line.svg" alt="">
+                </button>
+            </div> 
+        </div>
+        
+        
         <section class="slider container glide">
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
@@ -58,7 +73,30 @@
             </div>    
         </section>
     
+        <section>
+            <div>
+                <article>
+                    <img src="./img/products/frances.png" alt="Imagen de pan francés">
+                    <span>Francés/Casero</span>           
+                </article>
+                <article>
+                    <img src="./img/products/croissant.png" alt="Imagen de medialuna">
+                    <span>Facturas</span>           
+                </article>
+            </div>
+            <div>
+                <article>
+                    <img src="./img/products/bun.png" alt="Imagen de figaza">
+                    <span>Figazas/Negro</span>           
+                </article>
+                <article>
+                    <img src="./img/products/galleta.png" alt="Imagen de galleta">
+                    <span>Galletas</span>           
+                </article>
+            </div>
+        </section>
     </main>
+    
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script src="./slider.js"></script>

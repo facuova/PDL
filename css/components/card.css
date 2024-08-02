@@ -1,0 +1,8 @@
+.card-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: var(--spacing-28)
+}
+

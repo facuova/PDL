@@ -1,0 +1,10 @@
+#search-button {
+    background-color: white;
+    border: none;
+    margin-right: var(--spacing-12);
+}
+
+#cart-button {
+    background-color: white;
+    border: none;
+}

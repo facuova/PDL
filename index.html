@@ -10,6 +10,12 @@
 </head>
 
 <body>
+    <header> 
+        <nav>
+            <h1>Don Lisandro</h1>
+        </nav>        
+    </header>
+
     <main class="container">
         <div class="up-bar">
             <div class="search-container">
@@ -19,53 +25,57 @@
                 </button>
             </div> 
             <div>
-                <button>
-                    <img src="./img/icons/search-line.svg" alt="">
+                <button id="cart-button">
+                    <a href="">
+                        <img src="./img/icons/food-delivery (1).png" alt="Icono de carrito" >
+                    </a>
+                    
                 </button>
             </div> 
         </div>
         
         
-        <section class="slider container glide">
+        <section class="slider glide prueba">
+            <h2>Categorías</h2>
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
                     <li class="glide__slide">
                         <a href=""> 
-                            <article>
+                            <article class="card-product">
                                 <img src="./img/products/bread.png" alt="Imagen de panificados">
-                                <span>Panificados</span>
+                                <p>Panificados</p>
                             </article>
                         </a>
                     </li>
                     <li class="glide__slide">
                         <a href=""> 
-                            <article>
+                            <article class="card-product">
                                 <img src="./img/products/bakery.png" alt="Imagen de repostería">
-                                <span>Repostería</span>
+                                <p>Repostería</p>
                             </article>
                         </a>
                     </li>
                     <li class="glide__slide">
                         <a href=""> 
-                            <article>
+                            <article class="card-product">
                                 <img src="./img/products/meat.png" alt="Imagen de fiambres">
-                                <span>Fiambres</span>
+                                <p>Fiambres</p>
                             </article>
                         </a>
                     </li>
                     <li class="glide__slide">
                         <a href=""> 
-                            <article>
+                            <article class="card-product">
                                 <img src="./img/products/dairy-products.png" alt="Imagen de lácteos">
-                                <span>Lácteos</span>
+                                <p>Lácteos</p>
                             </article>
                         </a>
                     </li>
                     <li class="glide__slide">
                         <a href=""> 
-                            <article>
+                            <article class="card-product">
                                 <img src="./img/products/grocery.png" alt="Imagen de almacén">
-                                <span>Almacén</span>
+                                <p>Almacén</p>
                             </article>
                         </a>
                     </li class="glide__slide">  
@@ -73,26 +83,33 @@
             </div>    
         </section>
     
-        <section>
-            <div>
-                <article>
+        <section class="prueba">
+            <h2>Más vendidos</h2>
+            <div class="container-product">
+                <article class="card-product">
                     <img src="./img/products/frances.png" alt="Imagen de pan francés">
-                    <span>Francés/Casero</span>           
+                    <p>Francés/Casero</p>           
                 </article>
-                <article>
+                <article class="card-product">
                     <img src="./img/products/croissant.png" alt="Imagen de medialuna">
-                    <span>Facturas</span>           
+                    <p>Facturas</p>           
                 </article>
             </div>
-            <div>
-                <article>
-                    <img src="./img/products/bun.png" alt="Imagen de figaza">
-                    <span>Figazas/Negro</span>           
-                </article>
-                <article>
-                    <img src="./img/products/galleta.png" alt="Imagen de galleta">
-                    <span>Galletas</span>           
-                </article>
+            <div class="container-product">
+                <a href="">
+                    <article class="card-product">
+                        <img src="./img/products/bun.png" alt="Imagen de figaza">
+                        <p>Figazas/Negro</p>           
+                    </article>
+                </a>
+ 
+                <a href="">
+                    <article class="card-product">
+                        <img src="./img/products/galleta.png" alt="Imagen de galleta">
+                        <p>Galletas</p>           
+                    </article>
+                </a>
+                
             </div>
         </section>
     </main>

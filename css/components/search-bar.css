@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: var(--spacing-128);
+    margin-top: var(--spacing-28);
+    margin-bottom: var(--spacing-28);
 }
 
 
@@ -9,7 +12,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 2px solid;
+    align-items: center;
+    border: 1px solid var(--dark-500);
     border-radius: 30px;
     width: 70%;
 }

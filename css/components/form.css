@@ -1,0 +1,8 @@
+#search-input{
+    border: none;
+    margin-left: var(--spacing-12);
+}
+
+#search-input:focus {
+    outline: none;
+}

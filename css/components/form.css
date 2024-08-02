@@ -1,6 +1,7 @@
 #search-input{
     border: none;
     margin-left: var(--spacing-12);
+    height: var(--spacing-36);
 }
 
 #search-input:focus {

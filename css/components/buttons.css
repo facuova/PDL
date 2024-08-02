@@ -5,6 +5,7 @@
 }
 
 #cart-button {
-    background-color: white;
+    background-color: var(--dark-bg-solid);
     border: none;
 }
+

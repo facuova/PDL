@@ -1,14 +1,8 @@
-.up-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: var(--spacing-128);
-    margin-top: var(--spacing-28);
-    margin-bottom: var(--spacing-28);
+.search-container {
+    margin-top: var(--spacing-36);
 }
 
-
-.search-container {
+.search-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

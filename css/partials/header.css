@@ -1,4 +1,11 @@
-nav img {
-    width: var(--spacing-128);
-    height: var(--spacing-128);
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+nav img {
+    max-width: var(--spacing-128);
+    max-height: var(--spacing-128);
+}
+

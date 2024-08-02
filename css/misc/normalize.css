@@ -50,9 +50,10 @@ h2 {
   font-family: var(--alternative-font);
   font-size: var(--font-display);
   font-weight: 700;
-  margin-top: var(--spacing-16);
+  
 }
 
 main img {
-  width: 100%
+  max-width: var(--spacing-291);
+  max-height: var(--spacing-291);
 }

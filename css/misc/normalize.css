@@ -26,6 +26,10 @@ header {
   background-color: var(--dark-bg-solid);
 }
 
+header nav{
+  padding-top: var(--spacing-28);
+  padding-bottom: var(--spacing-28);
+}
 
 ul, ol {list-style-type: none}
 
@@ -50,5 +54,5 @@ h2 {
 }
 
 main img {
-    width: 100%
+  width: 100%
 }

@@ -9,3 +9,6 @@
     border: none;
 }
 
+.button-product-add {
+    width: var(--spacing-36);
+}

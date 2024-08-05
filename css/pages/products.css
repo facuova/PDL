@@ -1,0 +1,37 @@
+.products-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-68);
+    margin-top: var(--spacing-36);
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+}
+
+.product-container {
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 3.6rem,
+}
+
+.product-name-row {
+    grid-column: 1/3;
+}
+
+.product-price-row {
+    grid-column: 3/4;
+    justify-self: center;
+}
+
+.product-cant-row {
+    grid-column: 5/6;
+    justify-self: center;
+}
+
+.product-unity-row {
+    grid-column: 6/7;
+    justify-self: center;
+}

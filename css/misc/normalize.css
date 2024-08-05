@@ -35,7 +35,7 @@ ul, ol {list-style-type: none}
 
 h3 {
   font-family: var(--alternative-font);
-  font-size: var(--font-display);
+  font-size: var(--font-xlarge);
   font-weight: 500;
 }
 

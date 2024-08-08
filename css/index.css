@@ -14,4 +14,42 @@
 @import url('./pages/home.css');
 @import url('./pages/products.css');
 /*PARTIALS*/
-@import url(./partials/header.css);
+@import url('./partials/header.css');
+
+
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 33.33%; /* Un tercio de la pantalla */
+    background-color: white;
+    border-left: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Permite desplazamiento si hay muchos productos */
+    z-index: 100;
+}
+
+.cart-dropdown h2 {
+    margin-top: 0;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.cart-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}

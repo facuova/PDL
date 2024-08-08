@@ -13,32 +13,46 @@
     <header> 
         <nav class="container nav-container">
             <picture>
-                <a href="index.html">
+                <a href="/index.html">
                     <img src="./img/branding/logo.png" alt="">
                 </a>
-            </picture>
-            <div>
-                <button id="cart-button">
-                    <picture></picture>
-                    <a href="">
-                        <img src="./img/icons/food-delivery.png" alt="Icono de carrito" id="cart-logo" >
-                    </a>
-                    
-                </button>
-            </div> 
-        </nav>        
+            </picture>    
+            <picture >
+                <img onclick="toggleCart()" src="./img/icons/food-delivery.png" alt="Icono de carrito" id="cart-logo" >
+            </picture> 
+        </nav> 
+        <div class="cart-dropdown" id="cart-dropdown">
+            <h2>Carrito de Compras</h2>
+            <ul id="cart-items">
+                <li>
+                    <div class="product-container">
+                        <p>Pan francés/Casero/Sin sal</p>
+                        <p>500 grs</p>
+                        <p>$1100</p>
+                    </div>
+                </li>
+                <li></li>
+            </ul>
+            <div class="cart-total">
+                <span>Total: $<span id="cart-total">0.00</span></span>
+            </div>
+            <button class="cart-button" onclick="checkout()">Proceder al Pago</button>
+        </div>    
+        
+        
+        
     </header>
 
     <main class="container ">
         <div class="search-container">
             <div class="search-bar">
                 <input type="text" placeholder="Buscar productos..." id="search-input">
-                <button id="search-button">
-                    <img src="./img/icons/search-line.svg" alt="Buscar">
+                <button  id="search-button" >
+                    <img  src="./img/icons/search-line.svg" alt="Buscar">
                 </button>
             </div> 
         </div>
-        
+       
         
         <section class="slider glide container-section">
             <h2>Categorías</h2>
@@ -122,5 +136,6 @@
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script src="./slider.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

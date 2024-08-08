@@ -1,0 +1,65 @@
+.cart-dropdown {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 33.33%; /* Un tercio de la pantalla */
+    background-color: white;
+    border-left: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Permite desplazamiento si hay muchos productos */
+    z-index: 1;
+    font-size: 65.2%;
+}
+
+.cart-dropdown h2 {
+    margin-top: 0;
+}
+
+#cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.cart-title {
+    font-size: var(--font-small);
+    color: var(--dark-solid);
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+}
+
+.cart-items-child {
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 5rem,
+}
+
+.cart-items-name {
+    grid-column: 1/3;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el texto que se desborda del contenedor */
+    text-overflow: ellipsis; /* Añade "..." al final del texto que se corta */
+    max-width: 200px; /* Ajusta el ancho máximo según tus necesidades */
+}
+
+.cart-items-cant {
+    grid-column: 4/5;
+    justify-self: end;
+}
+
+.cart-items-price {
+    grid-column: 5/6;
+    justify-self: end;
+}
+
+
+.cart-items-child  p{
+    font-size: var(--font-xsmall);
+}

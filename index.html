@@ -22,25 +22,24 @@
             </picture> 
         </nav> 
         <div class="cart-dropdown" id="cart-dropdown">
-            <h2>Carrito de Compras</h2>
-            <ul id="cart-items">
-                <li>
-                    <div class="product-container">
-                        <p>Pan francés/Casero/Sin sal</p>
-                        <p>500 grs</p>
-                        <p>$1100</p>
-                    </div>
+            <h2 class="cart-title">Carrito de Compras</h2>
+            <ul class="cart-items">
+                <li class="cart-items-child">    
+                    <p class="cart-items-name">Pan francés/Casero/Sin sal</p>
+                    <p class="cart-items-cant">0.500 <span style="font-size: x-small;">Kg</span> </p>
+                    <p class="cart-items-price">$1100.0</p>                                                                             </li>
+                <li class="cart-items-child">
+                    <p class="cart-items-name">Facturas</p>
+                    <p class="cart-items-cant">12 <span style="font-size: x-small;">U</span></p>
+                    <p class="cart-items-price">$4800.0</p>
                 </li>
-                <li></li>
             </ul>
             <div class="cart-total">
                 <span>Total: $<span id="cart-total">0.00</span></span>
             </div>
             <button class="cart-button" onclick="checkout()">Proceder al Pago</button>
+            <button class="cart-button" onclick="hideCart()">Añadir producto</button>
         </div>    
-        
-        
-        
     </header>
 
     <main class="container ">

@@ -14,14 +14,10 @@
     font-size: 65.2%;
 }
 
-.cart-dropdown h2 {
-    margin-top: 0;
-}
-
-#cart-total {
-    margin-top: 20px;
-    font-weight: bold;
-    color: black;
+.cart-container {
+    display: flex;
+    flex-direction:column ;
+    gap: var(--spacing-20);
 }
 
 .cart-title {
@@ -55,11 +51,16 @@
 }
 
 .cart-items-price {
-    grid-column: 5/6;
+    grid-column: 6/7;
     justify-self: end;
 }
 
-
 .cart-items-child  p{
     font-size: var(--font-xsmall);
+}
+
+.cart-total {
+    text-align: end;
+    font-weight: bold;
+    color: black;
 }

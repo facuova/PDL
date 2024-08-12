@@ -8,8 +8,10 @@
 @import url('./components/buttons.css');
 @import url('./components/card.css');
 @import url('./components/form.css');
+@import url('./components/popup.css');
 @import url('./components/search-bar.css');
 @import url('./components/slider.css');
+
 /*PAGES*/
 @import url('./pages/home.css');
 @import url('./pages/products.css');

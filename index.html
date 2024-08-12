@@ -11,6 +11,7 @@
 
 <body>
     <header> 
+        <!--Barra nav-->
         <nav class="container nav-container">
             <picture>
                 <a href="/index.html">
@@ -21,8 +22,10 @@
                 <img onclick="toggleCart()" src="./img/icons/food-delivery.png" alt="Icono de carrito" id="cart-logo" >
             </picture> 
         </nav> 
+        <!--Carrito de compras-->
         <div class="cart-dropdown" id="cart-dropdown">
-            <h2 class="cart-title">Carrito de Compras</h2>
+            <div class="cart-container">
+                <h2 class="cart-title">Carrito de Compras</h2>
             <ul class="cart-items">
                 <li class="cart-items-child">    
                     <p class="cart-items-name">Pan francés/Casero/Sin sal</p>
@@ -33,16 +36,23 @@
                     <p class="cart-items-cant">12 <span style="font-size: x-small;">U</span></p>
                     <p class="cart-items-price">$4800.0</p>
                 </li>
+                <li class="cart-items-child">
+                    <p class="cart-items-name">Leche</p>
+                    <p class="cart-items-cant">1 <span style="font-size: x-small;">U</span></p>
+                    <p class="cart-items-price">$1500.0</p>
+                </li>
             </ul>
             <div class="cart-total">
-                <span>Total: $<span id="cart-total">0.00</span></span>
+                <span>Total: $<span>0.00</span></span>
             </div>
             <button class="cart-button" onclick="checkout()">Proceder al Pago</button>
             <button class="cart-button" onclick="hideCart()">Añadir producto</button>
+            </div>
         </div>    
     </header>
 
     <main class="container ">
+        <!--1° OPCIÓN DE BÚSQUEDA: Barra de buscador de productos-->
         <div class="search-container">
             <div class="search-bar">
                 <input type="text" placeholder="Buscar productos..." id="search-input">
@@ -52,8 +62,8 @@
             </div> 
         </div>
        
-        
         <section class="slider glide container-section">
+            <!--2° OPCIÓN DE BÚSQUEDA: Barra de buscador por categorías-->
             <h2>Categorías</h2>
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
@@ -102,6 +112,7 @@
         </section>
     
         <section class="container-section">
+            <!--3° OPCIÓN DE BÚSQUEDA: Barra de buscador por productos mas vendidos-->
             <h2>Más vendidos</h2>
             <div class="container-product">
                 <article class="card-product">
@@ -128,6 +139,18 @@
                         <p>Galletas</p>   
                     </a>       
                 </article>   
+            </div>
+            <!--POPUP - -->
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <h3> Pan francés</h3>
+                    <form class="login-form" action="">
+                        <label class="login-form-label" for="">Cantidad: </label>
+                        <input class="login-form-input" type="text" placeholder="" id="">
+                    </form>
+                    <button class="login-buttom-item" id="closePopup">X</button>
+                    <button class="login-buttom-item" id="closePopup">Añadir</button>
+                </div>
             </div>
         </section>
     </main>

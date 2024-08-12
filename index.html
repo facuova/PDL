@@ -116,7 +116,7 @@
             <h2>Más vendidos</h2>
             <div class="container-product">
                 <article class="card-product">
-                    <a href="">
+                    <a href="" id="panQuantity">
                         <img src="./img/products/frances.png" alt="Imagen de pan francés">
                         <p>Francés/Casero</p>  
                     </a>      
@@ -143,13 +143,16 @@
             <!--POPUP - -->
             <div id="popup" class="popup">
                 <div class="popup-content">
-                    <h3> Pan francés</h3>
-                    <form class="login-form" action="">
-                        <label class="login-form-label" for="">Cantidad: </label>
-                        <input class="login-form-input" type="text" placeholder="" id="">
+                    <h3> Francés/Casero</h3>
+                    <form class="quantity-form" action="">
+                        <label class="quantity-form-label" for="" >Cantidad: </label>
+                        <input class="quantity-form-input" type="number" placeholder="Ingresas cantidad" id="">
                     </form>
-                    <button class="login-buttom-item" id="closePopup">X</button>
-                    <button class="login-buttom-item" id="closePopup">Añadir</button>
+                    <div class="quantity-div">
+                        <button class="quantity-div-button" id="closePopup">Añadir</button>
+                        <button button class="quantity-div-button" id="closePopup">Cancelar</button>
+                    </div>
+                    
                 </div>
             </div>
         </section>

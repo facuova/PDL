@@ -7,3 +7,23 @@
 #search-input:focus {
     outline: none;
 }
+
+.quantity-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-12);
+}
+
+.quantity-form-label {
+  font-size: var(--font-large);
+  color: black;
+  font-weight: bold;  
+  align-self: center;
+}
+
+.quantity-form-input {
+  height: var(--spacing-36);
+  border-radius: 10px;
+  text-indent: var(--spacing-8);
+}

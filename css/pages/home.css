@@ -1,7 +1,7 @@
 .container-section {
     display: flex;
     flex-direction: column;
-    gap:var(--spacing-36);
+    gap:var(--spacing-20);
     margin-top: var(--spacing-16);
 }
 

@@ -12,7 +12,7 @@
     width: 70%;
 }
 
-@media screen and (max-width: 780) {
+@media screen and (max-width: 780px) {
     .search-container {
         margin-top: var(--spacing-8);
     }

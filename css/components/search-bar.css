@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid var(--dark-500);
-    border-radius: 30px;
+    border: 1.5px solid var(--dark-bg-solid);
+    border-radius: var(--spacing-16);
     width: 70%;
 }

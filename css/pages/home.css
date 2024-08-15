@@ -1,13 +1,24 @@
 .container-section {
     display: flex;
     flex-direction: row;
-    gap:var(--spacing-20);
+    justify-content: space-between;
     margin-top: var(--spacing-16);
+}
+
+.container-div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+    padding: var(--spacing-8);
+    border: 1.5px solid var(--dark-bg-solid);
+    border-radius: var(--spacing-16);
 }
 
 .container-ul {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: var(--spacing-20);    
 }
 
 .container-product {

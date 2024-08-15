@@ -8,29 +8,28 @@
   display: none;
   justify-content: center;
   align-items: center;
+  /*font-size: 65.2%;*/
 }
 
 /*Popup de terminos y condiciones*/
 .popup-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   gap: var(--spacing-16);
   flex-wrap: wrap;
   align-items: center;
-  width: 50%;
+  width: 80%;
+  padding: var(--spacing-16);
+  border: 1px solid white;
+  border-radius: var(--spacing-8);
   background-color: #fff;
-  padding: 20px;
+  font-size: var(--font-xsmall);
 }
 
-.popup h3 {
-  text-align: center;
-  margin-top: 0;
-}
-
-
-.quantity-div{
+.pop-content-div {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-16);
+  flex-direction: row;
+  justify-content: space-around;
+
 }

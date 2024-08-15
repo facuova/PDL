@@ -35,15 +35,15 @@ ul, ol {list-style-type: none}
 
 h3 {
   font-family: var(--alternative-font);
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
   font-weight: 500;
 }
 
 p {
   font-family: var(--alternative-font);
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   font-weight: 400;
-  color:var(--grey-font-solid);
+  color:var(--alternative-font);
 }
 
 h2 {

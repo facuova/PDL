@@ -62,12 +62,13 @@
             </div> 
         </div>
        
-        <section class="slider glide container-section">
+        <section class="container-section">
             <!--2° OPCIÓN DE BÚSQUEDA: Barra de buscador por categorías-->
-            <h2>Categorías</h2>
-            <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                    <li class="glide__slide">
+            
+            <article class="" >
+                <h2>Categorías</h2>
+                <ul class="container-ul">
+                    <li class="">
                         <a href="./pages/product.html"> 
                             <article class="card-product">
                                 <img src="./img/products/bread.png" alt="Imagen de panificados">
@@ -75,7 +76,7 @@
                             </article>
                         </a>
                     </li>
-                    <li class="glide__slide">
+                    <li class="">
                         <a href=""> 
                             <article class="card-product">
                                 <img src="./img/products/bakery.png" alt="Imagen de repostería">
@@ -83,7 +84,7 @@
                             </article>
                         </a>
                     </li>
-                    <li class="glide__slide">
+                    <li class="">
                         <a href=""> 
                             <article class="card-product">
                                 <img src="./img/products/meat.png" alt="Imagen de fiambres">
@@ -91,7 +92,9 @@
                             </article>
                         </a>
                     </li>
-                    <li class="glide__slide">
+                </ul>
+                <ul class="container-ul">
+                    <li class="">
                         <a href=""> 
                             <article class="card-product">
                                 <img src="./img/products/dairy-products.png" alt="Imagen de lácteos">
@@ -99,47 +102,59 @@
                             </article>
                         </a>
                     </li>
-                    <li class="glide__slide">
+                    <li class="">
                         <a href=""> 
                             <article class="card-product">
                                 <img src="./img/products/grocery.png" alt="Imagen de almacén">
                                 <p>Almacén</p>
                             </article>
                         </a>
-                    </li class="glide__slide">  
+                    </li> 
                 </ul>
-            </div>    
-        </section>
-    
-        <section class="container-section">
+            </article> 
             <!--3° OPCIÓN DE BÚSQUEDA: Barra de buscador por productos mas vendidos-->
-            <h2>Más vendidos</h2>
-            <div class="container-product">
-                <article class="card-product">
-                    <a href="" id="panQuantity">
-                        <img src="./img/products/frances.png" alt="Imagen de pan francés">
-                        <p>Francés/Casero</p>  
-                    </a>      
-                </article>
-                <article class="card-product">
-                    <a href="">
-                        <img src="./img/products/croissant.png" alt="Imagen de medialuna">
-                        <p>Facturas</p>  
-                    </a>   
-                </article>
-                <article class="card-product">
-                    <a href="">
-                        <img src="./img/products/bun.png" alt="Imagen de figaza">
-                        <p>Figazas/Negro</p> 
-                    </a>             
-                </article>
-                <article class="card-product">
-                    <a href="">
-                        <img src="./img/products/galleta.png" alt="Imagen de galleta">
-                        <p>Galletas</p>   
-                    </a>       
-                </article>   
-            </div>
+           
+            <article class="">
+                <h2>Más vendidos</h2>
+                <ul class="container-ul">
+                    <li>
+                        <article class="card-product">
+                            <a href="" id="panQuantity">
+                                <img src="./img/products/frances.png" alt="Imagen de pan francés">
+                                <p>Francés/Casero</p>  
+                            </a>      
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card-product">
+                            <a href="">
+                                <img src="./img/products/croissant.png" alt="Imagen de medialuna">
+                                <p>Facturas</p>  
+                            </a>   
+                        </article>
+                    </li>
+                </ul>
+                <ul class="container-ul">
+                    <li>
+                        <article class="card-product">
+                            <a href="">
+                                <img src="./img/products/bun.png" alt="Imagen de figaza">
+                                <p>Figazas/Negro</p> 
+                            </a>             
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card-product">
+                            <a href="">
+                                <img src="./img/products/galleta.png" alt="Imagen de galleta">
+                                <p>Galletas</p>   
+                            </a>       
+                        </article>  
+                    </li>
+                </ul>
+                
+                 
+            </article>
             <!--POPUP - -->
             <div id="popup" class="popup">
                 <div class="popup-content">
@@ -157,10 +172,6 @@
             </div>
         </section>
     </main>
-    
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script src="./slider.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

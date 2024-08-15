@@ -16,14 +16,14 @@ a {
   font-family: inherit;
   text-decoration: none;
   color: inherit;
-  padding: 10px;
+  padding: var(--spacing-8);
 }
 
 header {
   font-family: var(--alternative-font); 
   font-size: var(--font-intermediate);
   color: var(--light-font-solid);
-  background-color: var(--dark-bg-solid);
+  background-color: var(--dark-900);
 }
 
 header nav{
@@ -50,7 +50,6 @@ h2 {
   font-family: var(--alternative-font);
   font-size: var(--font-display);
   font-weight: 700;
-  
 }
 
 main img {
@@ -59,8 +58,27 @@ main img {
 }
 
 @media screen and (max-width: 780px){
-  main img {
-    max-width: 130px;
-    max-height: 130px;
+  header nav{
+    padding-top: var(--spacing-8);
+    padding-bottom: var(--spacing-8);
   }
+
+  main img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  h2 {
+    font-size: var(--font-intermediate);
+  }
+
+  h3 {
+   font-size: var(--font-medium);
+    
+  }
+
+  p {
+    font-size: var(--font-small);
+  }
+  
 }

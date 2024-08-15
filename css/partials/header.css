@@ -10,6 +10,7 @@ nav img {
 }
 
 @media screen and (max-width: 780px) {
+    
     .barnav-img {
         max-width: 60px;
         max-height: 60px;

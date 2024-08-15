@@ -11,3 +11,10 @@
     border-radius: var(--spacing-16);
     width: 70%;
 }
+
+@media screen and (max-width: 780) {
+    .search-container {
+        margin-top: var(--spacing-8);
+    }
+}
+

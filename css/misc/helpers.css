@@ -3,9 +3,25 @@
     margin: 0 auto;
 }
 
-@media screen and (max-width: 780px) {
+@media screen  and (orientation: portrait) and (max-width: 1024px) {
     .container{
-        max-width: 740px;
+        max-width: 928px;
+        max-height: 1000px;
+        margin: 0 auto;
+    } 
+}
+
+@media screen  and (orientation: portrait) and (max-width: 800px) {
+    .container{
+        max-width: 720px;
+        
+        margin: 0 auto;
+    } 
+}
+
+@media screen  and (orientation: portrait) and (max-width: 720px) {
+    .container{
+        max-width: 670px;
         margin: 0 auto;
     } 
 }

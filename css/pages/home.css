@@ -8,6 +8,7 @@
 .container-div {
     display: flex;
     flex-direction: column;
+    
     gap: var(--spacing-20);
     padding: var(--spacing-8);
     border: 1.5px solid var(--dark-bg-solid);
@@ -28,9 +29,13 @@
     justify-content: space-around;
 }*/
 
-@media screen and (max-width: 780px){
+@media screen and (orientation: portrait) and (max-width: 1200px){
     .container-section {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
         margin-top: var(--spacing-8);
+
     }
 
     .container-div {
@@ -39,3 +44,4 @@
         padding-right: var(--spacing-16);
     }
 }
+

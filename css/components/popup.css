@@ -27,9 +27,20 @@
   font-size: var(--font-xsmall);
 }
 
-.pop-content-div {
+.popup-content-div {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  gap: var(--spacing-16);
+}
 
+@media screen and (orientation: portrait) and (max-width: 800px) {
+  .popup-content {
+    gap: var(--spacing-8);
+  }
+
+  .popup-content-div{
+    gap: var(--spacing-8);
+  }
+   
 }

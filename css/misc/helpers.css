@@ -6,7 +6,6 @@
 @media screen  and (orientation: portrait) and (max-width: 1024px) {
     .container{
         max-width: 928px;
-        max-height: 1000px;
         margin: 0 auto;
     } 
 }
@@ -14,7 +13,6 @@
 @media screen  and (orientation: portrait) and (max-width: 800px) {
     .container{
         max-width: 720px;
-        
         margin: 0 auto;
     } 
 }

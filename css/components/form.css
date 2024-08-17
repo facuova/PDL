@@ -22,14 +22,22 @@
   align-self: center;
 }
 
-.quantity-form-input {
+.pop-quantity-form-input {
   height: var(--spacing-36);
   border: 1.5px solid var(--dark-bg-solid);
   border-radius: var(--spacing-8);
   text-indent: var(--spacing-8);
 }
 
-@media screen and (max-width: 780px) {
+.product-quantity-form-input {
+  height: var(--spacing-24);
+  width: var(--spacing-68);
+  border: 1.5px solid var(--dark-bg-solid);
+  border-radius: var(--spacing-8);
+  text-indent: var(--spacing-8);
+}
+
+@media screen and(orientation: portrait) and (max-width: 800px) {
   #search-input{
     height: var(--spacing-24);
   }

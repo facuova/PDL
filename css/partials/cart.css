@@ -65,3 +65,10 @@
     font-weight: bold;
     color: black;
 }
+
+@media screen and (orientation: portrait) and (max-width: 800px) {
+    .cart-dropdown {
+        width: 50%;
+    }
+     
+  }

@@ -11,7 +11,7 @@
   font-size: 65.2%;
 }
 
-/*Popup de terminos y condiciones*/
+/*Popup producto destacado*/
 .popup-content {
   display: flex;
   flex-direction: row;
@@ -40,6 +40,19 @@
   }
 
   .popup-content-div{
+    gap: var(--spacing-8);
+  }
+   
+}
+
+@media screen and (orientation: portrait) and (max-width: 400px) {
+  .popup-content {
+    flex-direction: column;
+    gap: var(--spacing-8);
+  }
+
+  .popup-content-div{
+    flex-direction: column;
     gap: var(--spacing-8);
   }
    

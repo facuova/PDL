@@ -23,3 +23,10 @@
         margin: 0 auto;
     } 
 }
+
+@media screen  and (orientation: portrait) and (max-width: 400px) {
+    .container{
+        max-width: 340px;
+        margin: 0 auto;
+    } 
+}

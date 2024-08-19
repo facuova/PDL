@@ -84,3 +84,16 @@ main img {
     font-size: var(--font-medium);
   }
 }
+
+@media screen and (orientation: portrait) and (max-width: 400px) {
+  header nav{
+    padding-top: var(--spacing-8);
+    padding-bottom: var(--spacing-8);
+  }
+
+  main img {
+    max-width: 90px;
+    max-height: 90px;
+  }
+
+}

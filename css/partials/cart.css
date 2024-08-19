@@ -71,4 +71,11 @@
         width: 50%;
     }
      
-  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 400px) {
+    .cart-dropdown {
+        width: 100%;
+    }
+     
+}

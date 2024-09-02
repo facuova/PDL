@@ -29,6 +29,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-20);
+    color: var(--dark-solid)
 }
 
 .cart-items-child {
@@ -63,4 +64,18 @@
     text-align: end;
     font-weight: bold;
     color: black;
+}
+
+@media screen and (orientation: portrait) and (max-width: 800px) {
+    .cart-dropdown {
+        width: 50%;
+    }
+     
+}
+
+@media screen and (orientation: portrait) and (max-width: 400px) {
+    .cart-dropdown {
+        width: 100%;
+    }
+     
 }

@@ -16,14 +16,14 @@ a {
   font-family: inherit;
   text-decoration: none;
   color: inherit;
-  padding: 10px;
+  padding: var(--spacing-8);
 }
 
 header {
   font-family: var(--alternative-font); 
   font-size: var(--font-intermediate);
   color: var(--light-font-solid);
-  background-color: var(--dark-bg-solid);
+  background-color: var(--dark-900);
 }
 
 header nav{
@@ -35,22 +35,21 @@ ul, ol {list-style-type: none}
 
 h3 {
   font-family: var(--alternative-font);
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
   font-weight: 500;
 }
 
 p {
   font-family: var(--alternative-font);
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   font-weight: 400;
-  color:var(--grey-font-solid);
+  color:var(--alternative-font);
 }
 
 h2 {
   font-family: var(--alternative-font);
   font-size: var(--font-display);
   font-weight: 700;
-  
 }
 
 main img {
@@ -58,9 +57,43 @@ main img {
   max-height: 200px;
 }
 
-@media screen and (max-width: 780px){
-  main img {
-    max-width: 130px;
-    max-height: 130px;
+@media screen and (orientation: portrait) and (max-width: 800px){
+  header {
+    font-size: var(--font-medium);
   }
+
+  header nav{
+    padding-top: var(--spacing-16);
+    padding-bottom: var(--spacing-16);
+  }
+
+  main img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  h2 {
+    font-size: var(--font-large);
+  }
+
+  h3 {
+   font-size: var(--font-intermediate);
+  }
+
+  p {
+    font-size: var(--font-medium);
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 400px) {
+  header nav{
+    padding-top: var(--spacing-8);
+    padding-bottom: var(--spacing-8);
+  }
+
+  main img {
+    max-width: 90px;
+    max-height: 90px;
+  }
+
 }

@@ -52,32 +52,33 @@
                             <p class="cart-items-price">$1100.0</p>  
                         
                         
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="icon-close"
-                        >
-                            <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M6 18L18 6M6 6l12 12"
-                                />
-                        </svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="icon-close"
+                            >
+                                <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                            </svg>
                         </div> 
                     </div>
-                </div>
-                
-            <div class="cart-total">
-                <span>Total: $<span>0.00</span></span>
+                </div>   
             </div>
+            
+            <div class="cart-total hidden">
+                <span class="total-pagar">Total: $200</span>
+            </div>
+            <p class="cart-empty"> No hay pedido en curso.</p>
             <button class="cart-button" onclick="checkout()">Proceder al Pago</button>
-            </div>
         </div>    
     </header>
-
+    
     <main class="container ">
         
         <!--1° OPCIÓN DE BÚSQUEDA: Barra de buscador de productos-->
@@ -190,6 +191,21 @@
                             <h3 class="product-price-row">Precio</h3>
                             <h3 class="product-cant-row">Cantidad</h3>
                             <h3 class="product-unity-row"> Unidad</h3>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="icon-close product-button-row"
+                                id="closePopup"
+                            >
+                                <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                            </svg>
                         </li>
                         <li class="product-container">
                             <p class="product-name-row">Pan común</p>
@@ -201,11 +217,12 @@
                             <button class="button-product-add product-button-row" >Añadir</button>
                         </li>    
                     </ul>                
-                    <button button class="quantity-div-button" id="closePopup">Cancelar</button>   
+                       
                 </div>
             </div>
         </section>
     </main>
     <script src="script.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>

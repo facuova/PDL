@@ -11,6 +11,11 @@
 
 .button-product-add {
     width: var(--spacing-36);
+    background-color: var(--secondary-500);
+    color: white;
+    border: 2px solid var(--secondary-900);
+    height: var(--spacing-36);
+    width: var(--spacing-68);
 }
 
 .cart-button {

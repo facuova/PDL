@@ -4,7 +4,7 @@
     right: 0;
     top: 0;
     height: 100%;
-    width: 33.33%; /* Un tercio de la pantalla */
+    width: 45%; /* Un tercio de la pantalla */
     background-color: white;
     border-left: 1px solid #ccc;
     padding: 20px;
@@ -20,9 +20,21 @@
     gap: var(--spacing-20);
 }
 
+.cart-container-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
 .cart-title {
     font-size: var(--font-small);
     color: var(--dark-solid);
+}
+
+.cart-close{
+    width: 25px;
+    height: 25px;
+    color: var(--dark-solid)
 }
 
 .cart-items {
@@ -35,7 +47,9 @@
 .cart-items-child {
     display:grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 5rem,
+    grid-template-rows: 5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .cart-items-name {
@@ -44,26 +58,59 @@
     overflow: hidden; /* Oculta el texto que se desborda del contenedor */
     text-overflow: ellipsis; /* Añade "..." al final del texto que se corta */
     max-width: 200px; /* Ajusta el ancho máximo según tus necesidades */
+    
 }
 
 .cart-items-cant {
-    grid-column: 4/5;
-    justify-self: end;
+    grid-column: 3/4;
+    justify-self: center;
 }
 
 .cart-items-price {
-    grid-column: 6/7;
-    justify-self: end;
+    grid-column: 4/5;    
+    justify-self: center;
+}
+
+.cart-items-sub {
+    grid-column: 5/6;
+    justify-self: center;
 }
 
 .cart-items-child  p{
     font-size: var(--font-xsmall);
 }
 
+.icon-close{
+    grid-column: 6/7;
+    justify-self: end;
+    width: 25px;
+    height: 25px;
+    color: var(--dark-solid)
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
 .cart-total {
-    text-align: end;
+    font-size: var(--font-small);
+    text-align: center;
     font-weight: bold;
     color: black;
+}
+
+.cart-empty{
+    color: var(--grey-font-solid);
+    font-size: var(--font-small);
+    padding: var(--spacing-24);
+    text-align: center;
+}
+
+.hidden-cart{
+    display: none;
+}
+.hidden{
+    display: none;
 }
 
 @media screen and (orientation: portrait) and (max-width: 800px) {
@@ -71,6 +118,13 @@
         width: 50%;
     }
      
+    .cart-items-child  p{
+        white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+        overflow: hidden; /* Oculta el texto que se desborda del contenedor */
+        text-overflow: ellipsis; /* Añade "..." al final del texto que se corta */
+        max-width: 200px;
+    }
+    
 }
 
 @media screen and (orientation: portrait) and (max-width: 400px) {

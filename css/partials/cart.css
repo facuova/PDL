@@ -62,12 +62,18 @@
 }
 
 .cart-items-cant {
-    grid-column: 4/5;
-    
+    grid-column: 3/4;
+    justify-self: center;
 }
 
 .cart-items-price {
-    grid-column: 5/6;    
+    grid-column: 4/5;    
+    justify-self: center;
+}
+
+.cart-items-sub {
+    grid-column: 5/6;
+    justify-self: center;
 }
 
 .cart-items-child  p{

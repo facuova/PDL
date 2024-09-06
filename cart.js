@@ -20,37 +20,46 @@ const valorTotal = document.querySelector('.total-pagar')
 const countProducts = document.querySelector('#contador-productos')
 const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
+const inputs = document.querySelectorAll('.product-quantity-form-input')
 
 productList.addEventListener('click', (e) => {
+    
     if (e.target.classList.contains('button-product-add')){
-        
-        const product = e.target.parentElement
+        const product = e.target.parentElement;
         const infoProduct = {
             cantidad: product.querySelector('.product-quantity-form-input').value,
             nombre: product.querySelector('.product-name-row').textContent,
             precio: product.querySelector('.product-price-row').textContent,
         };
-        console.log(infoProduct)
-        const exist = allProducts.some(product => product.nombre === infoProduct.nombre)
-
-        if (exist) {
-            const products = allProducts.map(product => {
-            if(product.nombre === infoProduct.nombre){
-                product.cantidad = Number(product.cantidad) + Number(infoProduct.cantidad);
-             
-            return product
+        
+        console.log(infoProduct);
+        //Validación para número cero o negativos
+        if (infoProduct.cantidad > 0) {
+            const exist = allProducts.some(product => product.nombre === infoProduct.nombre);
+            if (exist) {
+                const products = allProducts.map(product => {
+                if(product.nombre === infoProduct.nombre){
+                    product.cantidad = Number(product.cantidad) + Number(infoProduct.cantidad);
+                
+                return product
+                } else {
+                return product
+                };
+            });
+            allProducts = [...products]
             } else {
-            return product
-            };
-        });
-        allProducts = [...products]
+                allProducts = [...allProducts, infoProduct]
+            };    
         } else {
-            allProducts = [...allProducts, infoProduct]
-        };
-      
-    showCartHTML();
-      
+            //Esto genera una alerta "[Violation]'click' handler took 1433ms"
+            alert("Ingresé nro válido")
+        }     
     };
+    showCartHTML();  
+    //Limpiar el input cada vez que se agrega un producto
+    inputs.forEach((input)=>{
+        input.value = ""; 
+    })
 })
 
 //Funcion eliminar producto de carrito
@@ -94,17 +103,16 @@ const showCartHTML = () => {
       cartContainerProduct.innerHTML = `
           <div class="cart-items-child">
               <p class="cart-items-name">${product.nombre}</p>
-              <span class="cart-items-cant">${product.cantidad}</span>
-              <span class="cart-items-price">$${product.precio}</span>
-              <p class=""> ${subtotal}</p>
-          </div>
-          <svg
+              <p class="cart-items-cant">${product.cantidad}</p>
+              <p class="cart-items-price">$${product.precio}</p>
+              <p class="cart-items-sub">$${subtotal}</p>
+              <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="icon-close"
+              class="icon-close cart-items-delete"
           >
               <path
                   stroke-linecap="round"
@@ -112,12 +120,15 @@ const showCartHTML = () => {
                   d="M6 18L18 6M6 6l12 12"
               />
           </svg>
+              
+          </div>
+          
         `;
       rowProduct.append(cartContainerProduct);
       
       
     });
-    valorTotal.innerText = `$${total}`;
+    valorTotal.innerText = `Total: $${total}`;
     //countProducts.innerText = totalProducts;
 };
 

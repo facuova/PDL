@@ -6,8 +6,7 @@ function toggleCart() {
 
 function hideCart() {
     const cartDropdown = document.getElementById('cart-dropdown');
-    cartDropdown.style.display = cartDropdown.style.display === 'none' ? 'block' : 'none';
-    
+    cartDropdown.style.display = cartDropdown.style.display === 'none' ? 'block' : 'none'; 
 }
 
 const cartInfo = document.querySelector('.cart-product')

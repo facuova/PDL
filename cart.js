@@ -7,7 +7,6 @@ function toggleCart() {
 function hideCart() {
     const cartDropdown = document.getElementById('cart-dropdown');
     cartDropdown.style.display = cartDropdown.style.display === 'none' ? 'block' : 'none';
-    
 }
 
 const cartInfo = document.querySelector('.cart-product')
@@ -22,7 +21,8 @@ const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
 const inputs = document.querySelectorAll('.product-quantity-form-input')
 
-productList.addEventListener('click', (e) => {
+
+document.addEventListener('click', (e) => {
     
     if (e.target.classList.contains('button-product-add')){
         const product = e.target.parentElement;
@@ -32,7 +32,7 @@ productList.addEventListener('click', (e) => {
             precio: product.querySelector('.product-price-row').textContent,
         };
         
-        console.log(infoProduct);
+        //console.log(infoProduct);
         //Validación para número cero o negativos
         if (infoProduct.cantidad > 0) {
             const exist = allProducts.some(product => product.nombre === infoProduct.nombre);
@@ -49,18 +49,23 @@ productList.addEventListener('click', (e) => {
             allProducts = [...products]
             } else {
                 allProducts = [...allProducts, infoProduct]
-            };    
+            }; 
+
+            //Limpiar el input cada vez que se agrega un producto
+            inputs.forEach((input)=>{
+            input.value = ""; 
+    })
         } else {
             //Esto genera una alerta "[Violation]'click' handler took 1433ms"
             alert("Ingresé nro válido")
         }     
     };
+
     showCartHTML();  
-    //Limpiar el input cada vez que se agrega un producto
-    inputs.forEach((input)=>{
-        input.value = ""; 
-    })
+    
 })
+
+
 
 //Funcion eliminar producto de carrito
 rowProduct.addEventListener('click', (e)=> {
@@ -131,8 +136,6 @@ const showCartHTML = () => {
     valorTotal.innerText = `Total: $${total}`;
     //countProducts.innerText = totalProducts;
 };
-
-
 
 //Función para el pago
 function checkout() {

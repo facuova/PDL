@@ -21,21 +21,21 @@ const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
 const inputs = document.querySelectorAll('.product-quantity-form-input')
 
-// Función para guardar en el localStorage
+//Función para guardar en el localStorage
 function saveToLocalStorage() {
-    localStorage.setItem('cart', JSON.stringify(allProducts)); // Convierte el array en string JSON y lo guarda
+    localStorage.setItem('cart', JSON.stringify(allProducts));
 }
 
-// Función para cargar el carrito desde localStorage
+//Función para cargar el carrito desde localStorage
 function loadFromLocalStorage() {
     const storedCart = localStorage.getItem('cart');
     if (storedCart) {
-        allProducts = JSON.parse(storedCart); // Si hay productos guardados, los convierte de JSON a array
-        showCartHTML(); // Muestra los productos en el carrito
+        allProducts = JSON.parse(storedCart); 
+        showCartHTML(); 
     }
 }
 
-// Al cargar la página, restauramos los productos del localStorage
+//Al cargar la página, restauramos los productos del localStorage
 window.addEventListener('DOMContentLoaded', loadFromLocalStorage);
 
 document.addEventListener('click', (e) => {
@@ -89,11 +89,14 @@ rowProduct.addEventListener('click', (e)=> {
     if(e.target.classList.contains('icon-close')){
       const product = e.target.parentElement;
       const nombre = product.querySelector('.cart-items-name').textContent;
-  
+        
       allProducts = allProducts.filter(product => product.nombre !== nombre)
+      
+      localStorage.setItem('cart', JSON.stringify(allProducts));
+      
       showCartHTML();
     }
-  })
+})
 
 //Función para mostrar html
 const showCartHTML = () => {

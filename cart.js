@@ -6,7 +6,8 @@ function toggleCart() {
 
 function hideCart() {
     const cartDropdown = document.getElementById('cart-dropdown');
-    cartDropdown.style.display = cartDropdown.style.display === 'none' ? 'block' : 'none'; 
+    cartDropdown.style.display = cartDropdown.style.display === 'none' ? 'block' : 'none';
+    
 }
 
 const cartInfo = document.querySelector('.cart-product')
@@ -21,7 +22,24 @@ const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
 const inputs = document.querySelectorAll('.product-quantity-form-input')
 
-productList.addEventListener('click', (e) => {
+//Función para guardar en el localStorage
+function saveToLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(allProducts));
+}
+
+//Función para cargar el carrito desde localStorage
+function loadFromLocalStorage() {
+    const storedCart = localStorage.getItem('cart');
+    if (storedCart) {
+        allProducts = JSON.parse(storedCart); 
+        showCartHTML(); 
+    }
+}
+
+//Al cargar la página, restauramos los productos del localStorage
+window.addEventListener('DOMContentLoaded', loadFromLocalStorage);
+
+document.addEventListener('click', (e) => {
     
     if (e.target.classList.contains('button-product-add')){
         const product = e.target.parentElement;
@@ -31,7 +49,7 @@ productList.addEventListener('click', (e) => {
             precio: product.querySelector('.product-price-row').textContent,
         };
         
-        console.log(infoProduct);
+        //console.log(infoProduct);
         //Validación para número cero o negativos
         if (infoProduct.cantidad > 0) {
             const exist = allProducts.some(product => product.nombre === infoProduct.nombre);
@@ -48,29 +66,38 @@ productList.addEventListener('click', (e) => {
             allProducts = [...products]
             } else {
                 allProducts = [...allProducts, infoProduct]
-            };    
+            }; 
+
+            saveToLocalStorage();
+            //Limpiar el input cada vez que se agrega un producto
+            inputs.forEach((input)=>{
+            input.value = ""; 
+    })
         } else {
             //Esto genera una alerta "[Violation]'click' handler took 1433ms"
             alert("Ingresé nro válido")
         }     
     };
+
     showCartHTML();  
-    //Limpiar el input cada vez que se agrega un producto
-    inputs.forEach((input)=>{
-        input.value = ""; 
-    })
+    
 })
+
+
 
 //Funcion eliminar producto de carrito
 rowProduct.addEventListener('click', (e)=> {
     if(e.target.classList.contains('icon-close')){
       const product = e.target.parentElement;
       const nombre = product.querySelector('.cart-items-name').textContent;
-  
+        
       allProducts = allProducts.filter(product => product.nombre !== nombre)
+      
+      localStorage.setItem('cart', JSON.stringify(allProducts));
+      
       showCartHTML();
     }
-  })
+})
 
 //Función para mostrar html
 const showCartHTML = () => {
@@ -130,8 +157,6 @@ const showCartHTML = () => {
     valorTotal.innerText = `Total: $${total}`;
     //countProducts.innerText = totalProducts;
 };
-
-
 
 //Función para el pago
 function checkout() {
